@@ -17,13 +17,26 @@
             .aqua{color:aqua}
         </style>
         <script>
-        for(var i=1;i<=3;i++){
-            for(var k=1;k<=2; k++){
-                document.write(i+"행"+k+"열 ");
-            }
-            document.write("<br>");
-        }
+       var tv=new Object();
+       tv.color="white";
+       tv.price=3000000;
+       tv.info = function(){
+           document.write("tv색: "+this.color, "<br>");
+           document.write("tv가격 : "+this.price, "<br>");
+       }
 
+       var car={
+           color:"black",
+           price:5000000,
+           info: function(){
+               document.write("car 색상 : "+this.color, "<br>");
+               document.write("car 가격 : "+this.price, "<br>");
+           }
+       };
+       document.write("<h1>tv객체 매소드 호출</h1>");
+       tv.info();
+       document.write("<h1>car객체 매소드 호출</h1>");
+       car.info();
         </script>
     </body>
 </html>
